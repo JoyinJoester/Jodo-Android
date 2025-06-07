@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>    <!-- 任务卡片样式 - 现代化升级 -->
-    <style name="TaskCard" parent="Widget.Jodo.CardView">
+<resources>    <!-- 任务卡片样式 - 现代化升级 -->    <style name="TaskCard" parent="Widget.Jodo.CardView">
         <item name="android:layout_marginTop">6dp</item>
         <item name="android:layout_marginBottom">6dp</item>
         <item name="android:layout_marginStart">16dp</item>
@@ -10,10 +9,8 @@
         <item name="cardCornerRadius">16dp</item>
         <item name="cardElevation">6dp</item>
         <item name="cardBackgroundColor">@color/card_dark</item>
-        <item name="strokeColor">@color/divider</item>
-        <item name="strokeWidth">0.5dp</item>
         <item name="rippleColor">@color/ripple_color</item>
-    </style>    <style name="TaskText" parent="TextAppearance.MaterialComponents.Body1">
+    </style><style name="TaskText" parent="TextAppearance.MaterialComponents.Body1">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:textStyle">bold</item>

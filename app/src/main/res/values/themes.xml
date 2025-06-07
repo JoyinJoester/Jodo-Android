@@ -85,8 +85,6 @@
         <item name="cardBackgroundColor">@color/task_card_bg</item>
         <item name="cardElevation">4dp</item>
         <item name="cardCornerRadius">16dp</item>
-        <item name="strokeColor">@color/divider</item>
-        <item name="strokeWidth">1dp</item>
         <item name="rippleColor">@color/ripple_color</item>
     </style>
     
