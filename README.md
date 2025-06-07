@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Jodo - Android 待办事项应用
 
 ## 项目简介
@@ -130,3 +131,6 @@ cd jodo
 - 发送邮件到: [joyin8888@foxmail.com]
 
 -
+=======
+# Jodo-Android
+>>>>>>> 4d8dea0dfb4993fe92ca1ad16273f3384896ddd2
