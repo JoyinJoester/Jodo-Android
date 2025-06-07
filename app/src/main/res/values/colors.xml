@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 现代化主题核心颜色 - 深色高对比度 -->
+    <color name="primary">#6366f1</color>          <!-- 现代紫蓝色 -->
+    <color name="primary_dark">#4338ca</color>     <!-- 深紫蓝色 -->
+    <color name="primary_light">#8b5cf6</color>    <!-- 浅紫蓝色 -->
+    <color name="primary_variant">#4338ca</color>  <!-- 主要变体色 -->
+    
+    <color name="accent">#06b6d4</color>           <!-- 青色强调 -->
+    <color name="accent_light">#22d3ee</color>     <!-- 浅青色 -->
+    <color name="accent_dark">#0891b2</color>      <!-- 深青色 -->
+    
+    <!-- 背景色系 - 优雅深色 -->
+    <color name="background_dark">#0f172a</color>  <!-- 深蓝灰色背景 -->
+    <color name="background_light">#1e293b</color> <!-- 中蓝灰色背景 -->
+    <color name="background">#111827</color>       <!-- 主背景色 -->
+    <color name="surface_dark">#1f2937</color>     <!-- 深表面色 -->
+    <color name="surface_light">#374151</color>    <!-- 浅表面色 -->
+    <color name="card_dark">#374151</color>        <!-- 卡片背景色 -->
+    
+    <!-- 文本颜色 - 高对比度 -->
+    <color name="text_primary">#f8fafc</color>     <!-- 主文本 - 几乎白色 -->
+    <color name="text_primary_light">#ffffff</color> <!-- 亮主文本 - 纯白色 -->
+    <color name="text_secondary">#cbd5e1</color>   <!-- 次要文本 - 浅灰蓝 -->
+    <color name="text_secondary_light">#e2e8f0</color> <!-- 亮次要文本 - 更浅灰蓝 -->
+    <color name="text_hint">#94a3b8</color>        <!-- 提示文本 - 中灰蓝 -->
+    <color name="text_disabled">#64748b</color>    <!-- 禁用文本 - 深灰蓝 -->
+    
+    <!-- 系统导航栏和状态栏 -->
+    <color name="status_bar">#0f172a</color>       <!-- 状态栏色 -->
+    <color name="nav_bar">#0f172a</color>          <!-- 导航栏色 -->
+    
+    <!-- 任务颜色 - 现代化设计 -->
+    <color name="task_card_bg">#1f2937</color>     <!-- 任务卡片背景 -->
+    <color name="task_card_stroke">#374151</color> <!-- 任务卡片边框 -->
+    <color name="task_completed_bg">#0f172a</color><!-- 已完成任务背景 -->
+    <color name="task_completed_text">#94a3b8</color><!-- 已完成任务文本 -->
+    
+    <!-- 星标颜色 - 金黄色系 -->
+    <color name="star_active">#f59e0b</color>      <!-- 激活星标 -->
+    <color name="star_inactive">#64748b</color>    <!-- 未激活星标 -->
+    
+    <!-- 删除按钮 - 现代红色 -->
+    <color name="delete_button">#ef4444</color>    <!-- 删除按钮 -->
+    
+    <!-- 优先级颜色 - 现代化色彩 -->
+    <color name="priority_high">#ef4444</color>    <!-- 高优先级 - 红色 -->
+    <color name="priority_medium">#f59e0b</color>  <!-- 中优先级 - 橙色 -->
+    <color name="priority_low">#10b981</color>     <!-- 低优先级 - 绿色 -->
+    <color name="priority_starred">#f59e0b</color> <!-- 星标优先级 -->
+    <color name="priority_starred_completed">#92400e</color> <!-- 已完成星标 -->
+    
+    <!-- 成功和错误颜色 -->
+    <color name="success">#10b981</color>          <!-- 成功色 - 绿色 -->
+    <color name="warning">#f59e0b</color>          <!-- 警告色 - 橙色 -->
+    <color name="error">#ef4444</color>            <!-- 错误色 - 红色 -->
+    <color name="info">#06b6d4</color>             <!-- 信息色 - 青色 -->
+    
+    
+    <!-- 标准颜色 - 更新为现代化色彩 -->
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="purple_200">#a855f7</color>        <!-- 现代紫色 -->
+    <color name="purple_500">#6366f1</color>        <!-- 主紫色 -->
+    <color name="purple_700">#4338ca</color>        <!-- 深紫色 -->
+    <color name="teal_200">#22d3ee</color>          <!-- 现代青色 -->
+    <color name="teal_700">#0891b2</color>          <!-- 深青色 -->
+    <color name="green">#10b981</color>             <!-- 现代绿色 -->
+    <color name="red">#ef4444</color>               <!-- 现代红色 -->
+    
+    <!-- 辅助颜色 - 高对比度灰色系 -->
+    <color name="gray_100">#f1f5f9</color>          <!-- 极浅灰 -->
+    <color name="gray_200">#e2e8f0</color>          <!-- 浅灰 -->
+    <color name="gray_300">#cbd5e1</color>          <!-- 中浅灰 -->
+    <color name="gray_400">#94a3b8</color>          <!-- 中灰 -->
+    <color name="gray_500">#64748b</color>          <!-- 深中灰 -->
+    <color name="gray_600">#475569</color>          <!-- 深灰 -->
+    <color name="gray_700">#334155</color>          <!-- 很深灰 -->
+    <color name="gray_800">#1e293b</color>          <!-- 极深灰 -->
+    <color name="gray_900">#0f172a</color>          <!-- 最深灰 -->
+    
+    <!-- 分类颜色 - 彩虹色系 -->
+    <color name="category_work">#6366f1</color>     <!-- 工作 - 紫蓝 -->
+    <color name="category_personal">#10b981</color> <!-- 个人 - 绿色 -->
+    <color name="category_study">#f59e0b</color>    <!-- 学习 - 橙色 -->
+    <color name="category_health">#ef4444</color>   <!-- 健康 - 红色 -->
+    <color name="category_shopping">#06b6d4</color> <!-- 购物 - 青色 -->
+    <color name="category_travel">#8b5cf6</color>   <!-- 旅行 - 紫色 -->
+    
+    <!-- 通用分类颜色 -->
+    <color name="category_color">#06b6d4</color>    <!-- 默认分类颜色 - 青色 -->
+    
+    <!-- 重复设置颜色 -->
+    <color name="repeat_color">#a855f7</color>      <!-- 重复设置颜色 - 紫色 -->
+    
+    <!-- IC launcher 背景颜色 -->
+    <color name="ic_launcher_background">#6366f1</color>
+    
+    <!-- 选中状态颜色 -->
+    <color name="ripple_color">#1A6366f1</color>    <!-- 涟漪效果 -->
+    <color name="selected_overlay">#1A6366f1</color><!-- 选中覆盖 -->
+    
+    <!-- 分割线颜色 -->
+    <color name="divider">#374151</color>           <!-- 分割线 -->
+    <color name="divider_light">#4b5563</color>     <!-- 浅分割线 -->
+</resources>

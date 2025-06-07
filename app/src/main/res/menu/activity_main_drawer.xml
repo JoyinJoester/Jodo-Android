@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_all_tasks"
+            android:icon="@drawable/ic_all_inbox"
+            android:title="@string/menu_all" />
+        <item
+            android:id="@+id/nav_active_tasks"
+            android:icon="@drawable/ic_pending"
+            android:title="@string/menu_active" />
+        <item
+            android:id="@+id/nav_completed_tasks"
+            android:icon="@drawable/ic_task_complete"
+            android:title="@string/menu_completed" />
+        <item
+            android:id="@+id/nav_starred_tasks"
+            android:icon="@drawable/ic_star_nav"
+            android:title="@string/menu_starred" />
+        <item
+            android:id="@+id/nav_today_tasks"
+            android:icon="@drawable/ic_today"
+            android:title="@string/menu_today" />
+    </group>
+
+    <item 
+        android:id="@+id/nav_categories"
+        android:title="@string/categories">
+        <menu>
+            <group android:checkableBehavior="single">
+                <!-- 动态分类项将在这里添加 -->
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="@string/tools">
+        <menu>
+            <item
+                android:id="@+id/nav_statistics"
+                android:icon="@drawable/ic_statistics"
+                android:title="@string/statistics" />
+            <item
+                android:id="@+id/nav_category_management"
+                android:icon="@drawable/ic_category"
+                android:title="@string/category_management" />
+        </menu>
+    </item>
+</menu>

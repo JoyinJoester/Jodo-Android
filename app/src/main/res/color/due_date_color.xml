@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 逾期 - 红色 -->
+    <item android:color="@color/delete_button" android:state_activated="true" />
+    <!-- 今日 - 强调色 -->
+    <item android:color="@color/accent" android:state_checked="true" />
+    <!-- 一周内 - 黄色 -->
+    <item android:color="@color/star_active" android:state_selected="true" />
+    <!-- 默认 - 主色调 -->
+    <item android:color="@color/primary" />
+</selector>

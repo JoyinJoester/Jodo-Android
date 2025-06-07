@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_all_tasks">
+
+    <fragment
+        android:id="@+id/nav_all_tasks"
+        android:name="takagicom.todo.jodo.ui.AllTasksFragment"
+        android:label="@string/menu_all"
+        tools:layout="@layout/fragment_task_list" />
+
+    <fragment
+        android:id="@+id/nav_active_tasks"
+        android:name="takagicom.todo.jodo.ui.ActiveTasksFragment"
+        android:label="@string/menu_active"
+        tools:layout="@layout/fragment_task_list" />
+
+    <fragment
+        android:id="@+id/nav_completed_tasks"
+        android:name="takagicom.todo.jodo.ui.CompletedTasksFragment"
+        android:label="@string/menu_completed"
+        tools:layout="@layout/fragment_task_list" />
+
+    <fragment
+        android:id="@+id/nav_starred_tasks"
+        android:name="takagicom.todo.jodo.ui.StarredTasksFragment"
+        android:label="@string/menu_starred"
+        tools:layout="@layout/fragment_task_list" />
+
+    <fragment
+        android:id="@+id/nav_today_tasks"
+        android:name="takagicom.todo.jodo.ui.TodayTasksFragment"
+        android:label="@string/menu_today"
+        tools:layout="@layout/fragment_task_list" />
+        
+    <fragment
+        android:id="@+id/nav_statistics"
+        android:name="takagicom.todo.jodo.ui.StatisticsFragment"
+        android:label="@string/statistics"
+        tools:layout="@layout/fragment_statistics" />
+        
+    <fragment
+        android:id="@+id/nav_category_management"
+        android:name="takagicom.todo.jodo.ui.CategoryManagementFragment"
+        android:label="@string/category_management"
+        tools:layout="@layout/fragment_category_management" />
+</navigation>

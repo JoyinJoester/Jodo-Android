@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">Jodo</string>
+    <string name="navigation_drawer_open">打开导航抽屉</string>
+    <string name="navigation_drawer_close">关闭导航抽屉</string>
+    <string name="nav_header_title">Jodo</string>
+    <string name="nav_header_subtitle">您的任务管理助手</string>
+    <string name="nav_header_desc">导航头部</string>
+    <string name="action_settings">设置</string>
+
+    <string name="menu_active">进行中</string>
+    <string name="menu_completed">已完成</string>
+    <string name="menu_starred">已标星</string>
+    <string name="menu_today">计划内</string>
+    <string name="menu_all">全部任务</string>
+    
+    <string name="add_task">添加任务</string>
+    <string name="edit_task">编辑任务</string>
+    <string name="task_description">任务描述</string>
+    <string name="task_due_date">截止日期</string>
+    <string name="task_star">标星</string>
+    <string name="save">保存</string>
+    <string name="cancel">取消</string>
+    <string name="star_task">星标任务</string>
+    <string name="delete_task">删除任务</string>
+    <string name="empty_task_list">没有任务</string>
+    <string name="task_description_required">请输入任务描述</string>
+    
+    <string name="task_reminder">提醒我</string>
+    <string name="task_reminder_time">提醒时间</string>
+    <string name="task_repeat">重复</string>
+    <string name="task_repeat_none">不重复</string>
+    <string name="task_repeat_daily">每天</string>
+    <string name="task_repeat_weekly">每周</string>
+    <string name="task_repeat_monthly">每月</string>
+    <string name="task_repeat_yearly">每年</string>
+    <string name="select_repeat_interval">选择重复间隔</string>
+    <string name="select_repeat_option">选择重复选项</string>
+    
+    <!-- 分类相关 -->
+    <string name="task_category">分类</string>
+    <string name="task_category_none">无分类</string>
+    <string name="select_category">选择分类</string>
+    <string name="category_management">分类管理</string>
+    
+    <string name="notification_channel_name">任务提醒</string>
+    <string name="notification_channel_description">提醒您即将到期的任务</string>
+    <string name="task_due_soon">任务即将到期</string>
+    <string name="select_time">选择时间</string>
+    
+    <!-- 空状态提示 -->
+    <string name="empty_list_title">还没有任务</string>
+    <string name="empty_list_subtitle">点击下方按钮添加新任务</string>
+
+    <string name="delete">删除</string>
+    <string name="delete_task_confirmation">确定要删除这个任务吗？此操作无法恢复。</string>
+    
+    <!-- 搜索相关 -->
+    <string name="search_tasks">搜索任务</string>
+    <string name="search_hint">输入任务关键词...</string>
+    <string name="search_empty_title">开始搜索</string>
+    <string name="search_empty_subtitle">在上方输入关键词来搜索任务</string>
+    <string name="no_results_found">未找到结果</string>
+    <string name="try_different_search">尝试使用不同的关键词</string>
+    
+    <!-- 统计相关 -->
+    <string name="statistics">统计分析</string>
+    <string name="statistics_title">任务统计</string>
+    <string name="overall_progress">总体进度</string>
+    <string name="completion_rate_format">%.1f%% 完成</string>
+    <string name="task_summary">任务概况</string>
+    <string name="total_tasks">总任务数</string>
+    <string name="active_tasks">进行中</string>
+    <string name="completed_tasks">已完成</string>
+    <string name="starred_tasks">星标任务</string>
+    <string name="deadlines">截止日期</string>
+    <string name="overdue">已逾期</string>
+    <string name="due_today">今日截止</string>
+    <string name="due_this_week">本周截止</string>
+    <string name="activity">活跃度</string>
+    <string name="tasks_created_week">本周创建</string>
+    <string name="tasks_completed_week">本周完成</string>
+    <string name="tools">工具</string>
+    
+    <!-- 分类相关 -->
+    <string name="categories">分类</string>
+    
+    <!-- 饼图相关 -->
+    <string name="task_distribution">任务状态分布</string>
+    <string name="due_date_distribution">截止日期分布</string>
+    <string name="due_later">稍后截止</string>
+    <string name="no_due_date">无截止日期</string>
+    
+    <!-- 分类相关字符串 -->
+    <string name="nav_categories">nav_categories</string>
+</resources>

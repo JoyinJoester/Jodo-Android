@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- 标题 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_repeat_interval"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="@color/text_primary"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- 重复选项 -->
+    <RadioGroup
+        android:id="@+id/radio_group_repeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">        <RadioButton
+            android:id="@+id/radio_none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/task_repeat_none"
+            android:textColor="@color/text_primary"
+            android:buttonTint="@color/primary_light"
+            android:padding="8dp"/>
+
+        <RadioButton
+            android:id="@+id/radio_daily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/task_repeat_daily"
+            android:textColor="@color/text_primary"
+            android:buttonTint="@color/primary_light"
+            android:padding="8dp"/>
+
+        <RadioButton
+            android:id="@+id/radio_weekly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/task_repeat_weekly"
+            android:textColor="@color/text_primary"
+            android:buttonTint="@color/primary_light"
+            android:padding="8dp"/>
+
+        <RadioButton
+            android:id="@+id/radio_monthly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/task_repeat_monthly"
+            android:textColor="@color/text_primary"
+            android:buttonTint="@color/primary_light"
+            android:padding="8dp"/>
+
+        <RadioButton
+            android:id="@+id/radio_yearly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/task_repeat_yearly"
+            android:textColor="@color/text_primary"
+            android:buttonTint="@color/primary_light"
+            android:padding="8dp"/>
+    </RadioGroup>
+
+</LinearLayout>

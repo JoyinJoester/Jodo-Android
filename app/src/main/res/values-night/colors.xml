@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 夜间模式现代化配色 - 与日间模式保持一致 -->
+    <color name="primary">#6366f1</color>          <!-- 现代紫蓝色 -->
+    <color name="primary_dark">#4338ca</color>     <!-- 深紫蓝色 -->
+    <color name="primary_light">#8b5cf6</color>    <!-- 浅紫蓝色 -->
+    
+    <color name="accent">#06b6d4</color>           <!-- 青色强调 -->
+    <color name="accent_light">#22d3ee</color>     <!-- 浅青色 -->
+    <color name="accent_dark">#0891b2</color>      <!-- 深青色 -->
+    
+    <!-- 夜间模式专用 - 更深的背景色 -->
+    <color name="background_dark">#030712</color>  <!-- 极深背景 -->
+    <color name="surface_dark">#111827</color>     <!-- 深表面色 -->
+    <color name="card_dark">#1f2937</color>        <!-- 卡片背景色 -->
+      <!-- 文本颜色 - 夜间高对比度 -->
+    <color name="text_primary">#ffffff</color>     <!-- 纯白文本 -->
+    <color name="text_secondary">#d1d5db</color>   <!-- 浅灰蓝 -->
+    <color name="text_hint">#9ca3af</color>        <!-- 提示文本 -->
+</resources>

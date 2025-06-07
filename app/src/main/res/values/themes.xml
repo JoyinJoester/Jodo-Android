@@ -1,0 +1,171 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Jodo" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorSecondaryVariant">@color/accent_dark</item>
+        <item name="colorOnSecondary">@color/white</item>
+        
+        <!-- Status bar - 现代化深色 -->
+        <item name="android:statusBarColor">@color/status_bar</item>
+        <item name="android:windowLightStatusBar">false</item>
+        
+        <!-- System UI colors -->
+        <item name="android:navigationBarColor">@color/nav_bar</item>
+        
+        <!-- Background colors - 现代深色设计 -->
+        <item name="android:colorBackground">@color/background_dark</item>
+        <item name="colorSurface">@color/surface_dark</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorOnBackground">@color/text_primary</item>
+        
+        <!-- Text colors - 高对比度 -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        
+        <!-- Error colors -->
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/white</item>
+        
+        <!-- Component customization -->
+        <item name="materialCardViewStyle">@style/Widget.Jodo.CardView</item>
+        <item name="checkboxStyle">@style/Widget.Jodo.CheckBox</item>
+        <item name="floatingActionButtonStyle">@style/Widget.Jodo.FloatingActionButton</item>
+        <item name="actionBarStyle">@style/Widget.Jodo.ActionBar</item>
+        
+        <!-- Ripple effect -->
+        <item name="colorControlHighlight">@color/ripple_color</item>
+        
+        <!-- Dialog style -->
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.Jodo.MaterialAlertDialog</item>
+    </style>
+    
+    <!-- 去除ActionBar，使用独立的Toolbar -->
+    <style name="Theme.Jodo.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    
+    <!-- ActionBar样式 - 现代化设计 -->
+    <style name="Widget.Jodo.ActionBar" parent="Widget.MaterialComponents.ActionBar.Primary">
+        <item name="background">@color/surface_dark</item>
+        <item name="titleTextStyle">@style/TextAppearance.Jodo.ActionBar.Title</item>
+        <item name="elevation">4dp</item>
+    </style>
+    
+    <style name="TextAppearance.Jodo.ActionBar.Title" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">sans-serif-medium</item>
+    </style>
+    
+    <!-- 应用栏覆盖样式 -->
+    <style name="Theme.Jodo.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+        <item name="colorPrimary">@color/surface_dark</item>
+        <item name="colorOnPrimary">@color/text_primary</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="colorControlNormal">@color/text_secondary</item>
+    </style>
+    
+    <!-- 弹出菜单覆盖样式 -->
+    <style name="Theme.Jodo.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Dark">
+        <item name="colorPrimary">@color/card_dark</item>
+        <item name="colorOnPrimary">@color/text_primary</item>
+        <item name="android:colorBackground">@color/card_dark</item>
+    </style>
+    
+    <!-- 卡片样式 - 现代化设计 -->
+    <style name="Widget.Jodo.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/task_card_bg</item>
+        <item name="cardElevation">4dp</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="strokeColor">@color/divider</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="rippleColor">@color/ripple_color</item>
+    </style>
+    
+    <!-- 复选框样式 - 现代化 -->
+    <style name="Widget.Jodo.CheckBox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/accent</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Jodo.CheckBox</item>
+    </style>
+    
+    <style name="ThemeOverlay.Jodo.CheckBox" parent="">
+        <item name="colorOnSurface">@color/accent</item>
+        <item name="colorSecondary">@color/accent</item>
+    </style>
+    
+    <!-- 浮动操作按钮样式 - 现代化 -->
+    <style name="Widget.Jodo.FloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="backgroundTint">@color/primary</item>
+        <item name="tint">@color/white</item>
+        <item name="rippleColor">@color/primary_light</item>
+        <item name="elevation">8dp</item>
+        <item name="pressedTranslationZ">12dp</item>
+    </style>
+    
+    <!-- 自定义对话框样式 - 现代化 -->
+    <style name="ThemeOverlay.Jodo.MaterialAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Jodo.MediumComponent</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/MaterialAlertDialog.Jodo.Title.Text</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/MaterialAlertDialog.Jodo.Body.Text</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.Jodo.Button.TextButton.Dialog</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.Jodo.Button.TextButton.Dialog.Negative</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="backgroundTint">@color/card_dark</item>
+        <item name="colorSurface">@color/card_dark</item>
+    </style>
+    
+    <style name="MaterialAlertDialog.Jodo.Title.Text" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textAppearance">@style/TextAppearance.Jodo.Headline6</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="MaterialAlertDialog.Jodo.Body.Text" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+    </style>
+    
+    <style name="Widget.Jodo.Button.TextButton.Dialog" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="rippleColor">@color/ripple_color</item>
+    </style>
+    
+    <style name="Widget.Jodo.Button.TextButton.Dialog.Negative" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="rippleColor">@color/ripple_color</item>
+    </style>
+    
+    <style name="ShapeAppearance.Jodo.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+    
+    <style name="TextAppearance.Jodo.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">0.0125</item>
+    </style>
+    
+    <!-- 导航视图样式 -->
+    <style name="Widget.Jodo.NavigationView" parent="Widget.MaterialComponents.NavigationView">
+        <item name="itemIconTint">@color/drawer_item_color</item>
+        <item name="itemTextColor">@color/drawer_item_color</item>
+        <item name="itemBackground">@drawable/drawer_item_background</item>
+    </style>
+</resources>

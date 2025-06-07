@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="16dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- 颜色指示器 -->
+    <View
+        android:id="@+id/colorIndicator"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/bg_color_indicator" />
+
+    <!-- 分类图标 -->
+    <ImageView
+        android:id="@+id/categoryIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="12dp"        android:src="@drawable/ic_folder_24"
+        app:tint="@color/text_secondary" />
+
+    <!-- 分类名称 -->
+    <TextView
+        android:id="@+id/categoryName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="分类名称"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp" />
+
+    <!-- 选中指示器 -->
+    <ImageView
+        android:id="@+id/selectedIndicator"
+        android:layout_width="24dp"
+        android:layout_height="24dp"        android:src="@drawable/ic_check_24"
+        app:tint="@color/primary_light"
+        android:visibility="gone" />
+
+</LinearLayout>

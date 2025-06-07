@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/statistics_title"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 总体进度卡片 -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/TaskCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/overall_progress"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/progress_completion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    app:trackColor="@color/background_dark"
+                    app:indicatorColor="@color/accent" />
+
+                <TextView
+                    android:id="@+id/tv_completion_rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary"
+                    android:textAlignment="center"
+                    tools:text="65% 完成" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 任务分布饼图卡片 -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/TaskCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/task_distribution"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <takagicom.todo.jodo.view.SimplePieChart
+                    android:id="@+id/pie_chart_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pie_chart_height"
+                    android:layout_marginBottom="16dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 基本统计卡片 -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/TaskCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/task_summary"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <LinearLayout style="@style/StatItem">
+                    <TextView
+                        style="@style/StatLabel"
+                        android:text="@string/total_tasks" />
+                    <TextView
+                        android:id="@+id/tv_total_task_count"
+                        style="@style/StatValue"
+                        tools:text="42" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/StatItem">
+                    <TextView
+                        style="@style/StatLabel"
+                        android:text="@string/active_tasks" />
+                    <TextView
+                        android:id="@+id/tv_active_count"
+                        style="@style/StatValue"
+                        tools:text="15" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/StatItem">
+                    <TextView
+                        style="@style/StatLabel"
+                        android:text="@string/completed_tasks" />
+                    <TextView
+                        android:id="@+id/tv_completed_count"
+                        style="@style/StatValue"
+                        tools:text="27" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/StatItem">
+                    <TextView
+                        style="@style/StatLabel"
+                        android:text="@string/starred_tasks" />
+                    <TextView
+                        android:id="@+id/tv_starred_count"
+                        style="@style/StatValue"
+                        tools:text="8" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 截止日期统计卡片 -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/TaskCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/deadlines"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <LinearLayout style="@style/StatItem">
+                    <TextView
+                        style="@style/StatLabel"
+                        android:text="@string/overdue" />
+                    <TextView
+                        android:id="@+id/tv_overdue_count"
+                        style="@style/StatValue"
+                        android:textColor="@color/delete_button"
+                        tools:text="3" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/StatItem">
+                    <TextView
+                        style="@style/StatLabel"
+                        android:text="@string/due_today" />
+                    <TextView
+                        android:id="@+id/tv_due_today_count"
+                        style="@style/StatValue"
+                        android:textColor="@color/accent"
+                        tools:text="2" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/StatItem">
+                    <TextView
+                        style="@style/StatLabel"
+                        android:text="@string/due_this_week" />
+                    <TextView
+                        android:id="@+id/tv_due_this_week_count"
+                        style="@style/StatValue"
+                        tools:text="5" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 活跃度统计卡片 -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/TaskCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activity"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <LinearLayout style="@style/StatItem">
+                    <TextView
+                        style="@style/StatLabel"
+                        android:text="@string/tasks_created_week" />
+                    <TextView
+                        android:id="@+id/tv_created_last_week"
+                        style="@style/StatValue"
+                        tools:text="12" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/StatItem">
+                    <TextView
+                        style="@style/StatLabel"
+                        android:text="@string/tasks_completed_week" />
+                    <TextView
+                        android:id="@+id/tv_completed_last_week"
+                        style="@style/StatValue"
+                        tools:text="9" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

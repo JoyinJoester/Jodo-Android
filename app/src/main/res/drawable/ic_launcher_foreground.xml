@@ -1,0 +1,19 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group android:scaleX="0.48"
+        android:scaleY="0.48"
+        android:translateX="28.08"
+        android:translateY="28.08">
+        
+        <!-- 更粗、更美观的白色对号 -->
+        <path
+            android:pathData="M30,54L45,70L78,35"
+            android:strokeWidth="14"
+            android:strokeColor="#FFFFFF"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round" />
+    </group>
+</vector>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 选中状态 - 现代化强调色背景 -->
+    <item android:color="@color/selected_overlay" android:state_checked="true" />
+    <!-- 按下状态 - 涟漪效果 -->
+    <item android:color="@color/ripple_color" android:state_pressed="true" />
+    <!-- 默认状态 - 透明 -->
+    <item android:color="@android:color/transparent" />
+</selector>
