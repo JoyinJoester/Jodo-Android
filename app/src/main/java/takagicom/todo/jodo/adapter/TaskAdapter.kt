@@ -47,6 +47,8 @@ class TaskAdapter(
         private val textDueDate: TextView = itemView.findViewById(R.id.text_due_date)
         private val textCategory: TextView = itemView.findViewById(R.id.text_category)
         private val textRepeat: TextView = itemView.findViewById(R.id.text_repeat)
+        private val textReminder: TextView = itemView.findViewById(R.id.text_reminder)
+        private val textPriority: TextView = itemView.findViewById(R.id.text_priority)
         private val checkboxCompleted: CheckBox = itemView.findViewById(R.id.checkbox_completed)
         private val buttonStar: ImageButton = itemView.findViewById(R.id.button_star)
         private val buttonDelete: ImageButton = itemView.findViewById(R.id.button_delete)
@@ -96,9 +98,7 @@ class TaskAdapter(
                     textCategory.visibility = View.GONE
                 }            } else {
                 textCategory.visibility = View.GONE
-            }
-
-            // 设置重复设置信息
+            }            // 设置重复设置信息
             if (task.repeat != takagicom.todo.jodo.model.RepeatInterval.NONE) {
                 val repeatText = getRepeatText(task.repeat, task.repeatSettings)
                 textRepeat.text = repeatText
@@ -111,7 +111,33 @@ class TaskAdapter(
                 }
             } else {
                 textRepeat.visibility = View.GONE
-            }            // 设置复选框状态 - 防止闪退的关键修复
+            }            // 设置提醒信息
+            if (task.reminder_time != null) {
+                textReminder.text = "提醒"
+                textReminder.visibility = View.VISIBLE
+                
+                if (task.completed) {
+                    textReminder.alpha = 0.7f
+                } else {
+                    textReminder.alpha = 0.8f
+                }
+            } else {
+                textReminder.visibility = View.GONE
+            }
+
+            // 设置优先级信息
+            if (task.starred) {
+                textPriority.text = "重要"
+                textPriority.visibility = View.VISIBLE
+                
+                if (task.completed) {
+                    textPriority.alpha = 0.7f
+                } else {
+                    textPriority.alpha = 0.8f
+                }
+            } else {
+                textPriority.visibility = View.GONE
+            }// 设置复选框状态 - 防止闪退的关键修复
             checkboxCompleted.isChecked = task.completed
             
             // 使用简单的点击事件替代复选框的 OnCheckedChangeListener

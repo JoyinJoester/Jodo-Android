@@ -85,58 +85,111 @@
                 android:shadowDy="1"
                 android:shadowRadius="4"
                 android:letterSpacing="0.01"
-                tools:text="完成数学作业" />
-
-            <!-- 任务信息行 -->
-            <LinearLayout
+                tools:text="完成数学作业" />            <!-- 任务信息行 - 可滑动 -->
+            <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">                <TextView
-                    android:id="@+id/text_due_date"
-                    style="@style/TaskDateText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12sp"
-                    android:textColor="#FFFFFF"
-                    android:background="@drawable/bg_task_info_readable"
-                    android:padding="6dp"
-                    android:drawablePadding="4dp"
-                    app:drawableStartCompat="@drawable/ic_calendar"
-                    app:drawableTint="@color/accent_light"
-                    tools:text="2023/12/31" />                <TextView
-                    android:id="@+id/text_category"
-                    style="@style/TaskCategoryText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:textSize="12sp"
-                    android:textColor="#FFFFFF"
-                    android:background="@drawable/bg_task_info_readable"
-                    android:padding="6dp"
-                    android:drawablePadding="4dp"
-                    android:visibility="gone"
-                    app:drawableStartCompat="@drawable/ic_category"
-                    app:drawableTint="@color/accent_light"
-                    tools:text="工作"
-                    tools:visibility="visible" />                <TextView
-                    android:id="@+id/text_repeat"
-                    style="@style/TaskCategoryText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:textSize="12sp"
-                    android:textColor="#FFFFFF"
-                    android:background="@drawable/bg_task_info_readable"
-                    android:padding="6dp"
-                    android:drawablePadding="4dp"
-                    android:visibility="gone"
-                    app:drawableStartCompat="@drawable/ic_repeat"
-                    app:drawableTint="@color/accent_light"
-                    tools:text="每周"
-                    tools:visibility="visible" />
+                android:scrollbars="none"
+                android:fadeScrollbars="true"
+                android:scrollbarThumbHorizontal="@android:color/transparent"
+                android:scrollbarTrackHorizontal="@android:color/transparent">
 
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/text_due_date"
+                        style="@style/TaskDateText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/bg_task_info_readable"
+                        android:padding="6dp"
+                        android:drawablePadding="4dp"
+                        app:drawableStartCompat="@drawable/ic_calendar"
+                        app:drawableTint="@color/accent_light"
+                        tools:text="2023/12/31" />
+
+                    <TextView
+                        android:id="@+id/text_category"
+                        style="@style/TaskCategoryText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:textSize="12sp"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/bg_task_info_readable"
+                        android:padding="6dp"
+                        android:drawablePadding="4dp"
+                        android:visibility="gone"
+                        app:drawableStartCompat="@drawable/ic_category"
+                        app:drawableTint="@color/accent_light"
+                        tools:text="工作"
+                        tools:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/text_repeat"
+                        style="@style/TaskCategoryText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:textSize="12sp"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/bg_task_info_readable"
+                        android:padding="6dp"
+                        android:drawablePadding="4dp"
+                        android:visibility="gone"
+                        app:drawableStartCompat="@drawable/ic_repeat"
+                        app:drawableTint="@color/accent_light"
+                        tools:text="每周"
+                        tools:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/text_reminder"
+                        style="@style/TaskCategoryText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:textSize="12sp"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/bg_task_info_readable"
+                        android:padding="6dp"
+                        android:drawablePadding="4dp"
+                        android:visibility="gone"
+                        app:drawableStartCompat="@drawable/ic_notification"
+                        app:drawableTint="@color/accent_light"
+                        tools:text="提醒"
+                        tools:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/text_priority"
+                        style="@style/TaskCategoryText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:textSize="12sp"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/bg_task_info_readable"
+                        android:padding="6dp"
+                        android:drawablePadding="4dp"
+                        android:visibility="gone"
+                        app:drawableStartCompat="@drawable/ic_priority"
+                        app:drawableTint="@color/accent_light"
+                        tools:text="高优先级"
+                        tools:visibility="visible" />
+
+                    <!-- 右侧留白，确保最后一个元素可以完全显示 -->
+                    <View
+                        android:layout_width="16dp"
+                        android:layout_height="1dp" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
 
         </LinearLayout>
 

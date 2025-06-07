@@ -1,136 +1,148 @@
-<<<<<<< HEAD
-# Jodo - Android 待办事项应用
+# Jodo - Android Todo Application
 
-## 项目简介
+[![中文版](https://img.shields.io/badge/README-中文版-blue)](README_ZH.md)
 
-Jodo 是一个功能丰富的Android待办事项应用，专注于提供简洁高效的任务管理体验。
+## Project Overview
 
-## 主要功能
+Jodo is a feature-rich Android todo application designed to provide a clean and efficient task management experience.
 
-### 任务管理
-- ✅ 添加、编辑、删除任务
-- ✅ 标记任务完成状态
-- ✅ 收藏重要任务
-- ✅ 设置任务截止日期
-- ✅ 任务提醒功能
-- ✅ 重复任务设置
+## Key Features
 
-### 分类管理
-- ✅ 创建自定义分类
-- ✅ 拖拽排序分类
-- ✅ 分类颜色标识
-- ✅ 按分类筛选任务
+### Task Management
+- ✅ Add, edit, and delete tasks
+- ✅ Mark task completion status
+- ✅ Star important tasks
+- ✅ Set task due dates
+- ✅ Task reminder notifications
+- ✅ Recurring task settings
 
-### 筛选功能
-- ✅ 全部任务
-- ✅ 进行中任务
-- ✅ 已完成任务
-- ✅ 收藏任务
-- ✅ 今日任务
-- ✅ 按分类筛选
+### Category Management
+- ✅ Create custom categories
+- ✅ Drag-and-drop category sorting
+- ✅ Category color coding
+- ✅ Filter tasks by category
 
-### 统计功能
-- ✅ 任务完成统计
-- ✅ 分类任务数量统计
-- ✅ 可视化图表展示
+### Filtering Options
+- ✅ All tasks
+- ✅ Active tasks
+- ✅ Completed tasks
+- ✅ Starred tasks
+- ✅ Today's tasks
+- ✅ Filter by category
 
-### 用户界面
-- ✅ Material Design 设计规范
-- ✅ 深色/浅色主题
-- ✅ 直观的侧边栏导航
-- ✅ 流畅的动画效果
-- ✅ 响应式布局
+### Statistics
+- ✅ Task completion statistics
+- ✅ Category task count statistics
+- ✅ Visual chart displays
 
-## 技术特点
+### User Interface
+- ✅ Material Design standards
+- ✅ Dark/Light theme support
+- ✅ Intuitive sidebar navigation
+- ✅ Smooth animations
+- ✅ Responsive layout
 
-### 架构
-- **MVVM架构模式** - 使用ViewModel和LiveData
-- **Repository模式** - 数据访问层抽象
-- **单一数据源** - StateFlow统一状态管理
+## Technical Highlights
 
-### 技术栈
-- **Kotlin** - 100% Kotlin开发
-- **Android Jetpack** - ViewModel, LiveData, Navigation等
-- **Material Design Components** - 现代化UI组件
-- **Coroutines** - 异步编程
-- **Gson** - JSON序列化
-- **WorkManager** - 后台任务调度
+### Architecture
+- **MVVM Pattern** - Using ViewModel and LiveData
+- **Repository Pattern** - Data access layer abstraction
+- **Single Source of Truth** - StateFlow unified state management
 
-### 数据存储
-- **本地JSON存储** - 轻量级数据持久化
-- **类型安全** - 强类型数据模型
-- **数据迁移** - 版本兼容性支持
+### Technology Stack
+- **Kotlin** - 100% Kotlin development
+- **Android Jetpack** - ViewModel, LiveData, Navigation, etc.
+- **Material Design Components** - Modern UI components
+- **Coroutines** - Asynchronous programming
+- **Gson** - JSON serialization
+- **WorkManager** - Background task scheduling
 
-## 项目结构
+### Data Storage
+- **Local JSON Storage** - Lightweight data persistence
+- **Type Safety** - Strongly typed data models
+- **Data Migration** - Version compatibility support
+
+## Project Structure
 
 ```
 app/src/main/java/takagicom/todo/jodo/
-├── adapter/           # RecyclerView适配器
-├── model/            # 数据模型
-├── repository/       # 数据仓库
-├── service/          # 后台服务
-├── ui/              # UI界面
-├── utils/           # 工具类
-├── viewmodel/       # ViewModel层
-└── MainActivity.kt  # 主活动
+├── adapter/           # RecyclerView adapters
+├── model/            # Data models
+├── repository/       # Data repositories
+├── service/          # Background services
+├── ui/              # UI components
+├── utils/           # Utility classes
+├── viewmodel/       # ViewModel layer
+└── MainActivity.kt  # Main activity
 ```
 
-## 安装要求
+## System Requirements
 
-- **最低Android版本**: Android 7.0 (API 24)
-- **目标Android版本**: Android 14 (API 34)
-- **Gradle版本**: 8.7
-- **Kotlin版本**: 1.9.22
+- **Minimum Android Version**: Android 7.0 (API 24)
+- **Target Android Version**: Android 14 (API 34)
+- **Gradle Version**: 8.7
+- **Kotlin Version**: 1.9.22
 
-## 编译构建
+## Build and Installation
 
-1. 克隆项目
+1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/jodo.git
-cd jodo
+git clone https://github.com/JoyinJoester/Jodo-Android.git
+cd Jodo-Android
 ```
 
-2. 打开Android Studio导入项目
+2. Open the project in Android Studio
 
-3. 构建项目
+3. Build the project
 ```bash
 ./gradlew assembleDebug
 ```
 
-4. 安装到设备
+4. Install on device
 ```bash
 ./gradlew installDebug
 ```
 
-## 功能截图
+## Screenshots
 
-*待补充应用截图*
+*Screenshots to be added*
 
-## 版本历史
+## Version History
 
-### v1.0.0 (当前版本)
-- 基础任务管理功能
-- 分类系统
-- 筛选功能
-- 提醒功能
-- 重复任务
-- 统计功能
+### v1.0.0 (Current Version)
+- Basic task management functionality
+- Category system
+- Filtering capabilities
+- Reminder functionality
+- Recurring tasks
+- Statistics features
 
-## 贡献指南
+## Contributing
 
-欢迎提交Issue和Pull Request来改进这个项目！
+Issues and Pull Requests are welcome to improve this project!
 
-## 许可证
+### How to Contribute
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-本项目采用MIT许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
+## License
 
-## 联系方式
+This project is licensed under the GPL License - see the [LICENSE](LICENSE) file for details
 
-如有问题或建议，请通过以下方式联系：
-- 提交GitHub Issue
-- 发送邮件到: [joyin8888@foxmail.com]
+## Contact
 
--
-=======
-# Jodo-Android
->>>>>>> 4d8dea0dfb4993fe92ca1ad16273f3384896ddd2
+If you have any questions or suggestions, please contact us through:
+- Submit a GitHub Issue
+- Send email to: [joyin8888@foxmail.com]
+
+## Acknowledgments
+
+- Thanks to all contributors who helped make this project better
+- Special thanks to the Android development community for their valuable resources and libraries
+
+---
+
+**Note**: This is an open-source project created for learning and demonstration purposes. Feel free to use, modify, and distribute according to the MIT license terms.
