@@ -145,4 +145,4 @@ If you have any questions or suggestions, please contact us through:
 
 ---
 
-**Note**: This is an open-source project created for learning and demonstration purposes. Feel free to use, modify, and distribute according to the MIT license terms.
+**Note**: This is an open-source project created for learning and demonstration purposes. Feel free to use, modify, and distribute according to the GPL license terms.

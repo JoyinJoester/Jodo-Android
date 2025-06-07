@@ -87,8 +87,8 @@ app/src/main/java/takagicom/todo/jodo/
 
 1. 克隆项目
 ```bash
-git clone https://github.com/yourusername/jodo.git
-cd jodo
+git clone https://github.com/JoyinJoester/Jodo-Android.git
+cd Jodo-Android
 ```
 
 2. 打开Android Studio导入项目
@@ -130,5 +130,3 @@ cd jodo
 如有问题或建议，请通过以下方式联系：
 - 提交GitHub Issue
 - 发送邮件到: [joyin8888@foxmail.com]
-
--
