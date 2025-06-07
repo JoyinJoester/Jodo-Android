@@ -122,7 +122,7 @@ cd jodo
 
 ## 许可证
 
-本项目采用MIT许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
+本项目采用GPL许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
 
 ## 联系方式
 
