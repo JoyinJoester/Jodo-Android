@@ -123,25 +123,12 @@ class TaskAdapter(
                 }
             } else {
                 textReminder.visibility = View.GONE
-            }
-
-            // 设置优先级信息
-            if (task.starred) {
-                textPriority.text = "重要"
-                textPriority.visibility = View.VISIBLE
-                
-                if (task.completed) {
-                    textPriority.alpha = 0.7f
-                } else {
-                    textPriority.alpha = 0.8f
-                }
-            } else {
-                textPriority.visibility = View.GONE
-            }// 设置复选框状态 - 防止闪退的关键修复
+            }            // 设置优先级信息 - 移除重要标识显示
+            textPriority.visibility = View.GONE// 设置复选框状态 - 防止闪退的关键修复
             checkboxCompleted.isChecked = task.completed
-            
-            // 使用简单的点击事件替代复选框的 OnCheckedChangeListener
+              // 使用简单的点击事件替代复选框的 OnCheckedChangeListener
             checkboxCompleted.setOnClickListener {
+                android.util.Log.d("TaskAdapter", "Checkbox clicked for task: ${task.description}")
                 try {
                     val position = adapterPosition
                     
@@ -149,6 +136,7 @@ class TaskAdapter(
                         val currentTask = getItem(position)
                         
                         if (currentTask != null) {
+                            android.util.Log.d("TaskAdapter", "Checkbox click - valid task found: ${currentTask.description}, id: ${currentTask.id}")
                             // 立即更新复选框UI状态，防止闪退
                             val newCompletedState = !currentTask.completed
                             checkboxCompleted.isChecked = newCompletedState
@@ -156,17 +144,22 @@ class TaskAdapter(
                             // 使用post确保在主线程中执行数据更新
                             itemView.post {
                                 try {
+                                    android.util.Log.d("TaskAdapter", "Calling onCheckboxClick for task id: ${currentTask.id}")
                                     onCheckboxClick(currentTask.id)
                                 } catch (e: Exception) {
+                                    android.util.Log.e("TaskAdapter", "Error in onCheckboxClick callback", e)
                                     // 如果回调失败，恢复原状态
                                     checkboxCompleted.isChecked = currentTask.completed
                                 }
                             }
                         } else {
+                            android.util.Log.w("TaskAdapter", "Checkbox click - currentTask is null")
                         }
                     } else {
+                        android.util.Log.w("TaskAdapter", "Checkbox click - invalid position: $position, itemCount: $itemCount")
                     }
                 } catch (e: Exception) {
+                    android.util.Log.e("TaskAdapter", "Error in checkbox click handler", e)
                     // 防止闪退，记录错误但不中断用户体验
                     // 尝试恢复到安全状态
                     try {
@@ -221,6 +214,7 @@ class TaskAdapter(
                 }
             }            // 使用最简单的事件绑定方式
             buttonStar.setOnClickListener {
+                android.util.Log.d("TaskAdapter", "Star button clicked for task: ${task.description}")
                 try {
                     val position = adapterPosition
                     
@@ -228,6 +222,7 @@ class TaskAdapter(
                         val task = getItem(position)
                         
                         if (task != null) {
+                            android.util.Log.d("TaskAdapter", "Star click - valid task found: ${task.description}, id: ${task.id}")
                             // 立即更新UI状态，防止闪退
                             val newStarredState = !task.starred
                             try {
@@ -256,20 +251,26 @@ class TaskAdapter(
                                     }
                                 }
                             } catch (uiE: Exception) {
+                                android.util.Log.e("TaskAdapter", "Error updating star UI", uiE)
                             }
                             
                             // 使用post确保在主线程中执行数据更新
                             itemView.post {
                                 try {
+                                    android.util.Log.d("TaskAdapter", "Calling onStarClick for task id: ${task.id}")
                                     onStarClick(task.id)
                                 } catch (e: Exception) {
+                                    android.util.Log.e("TaskAdapter", "Error in onStarClick callback", e)
                                 }
                             }
                         } else {
+                            android.util.Log.w("TaskAdapter", "Star click - task is null")
                         }
                     } else {
+                        android.util.Log.w("TaskAdapter", "Star click - invalid position: $position, itemCount: $itemCount")
                     }
                 } catch (e: Exception) {
+                    android.util.Log.e("TaskAdapter", "Error in star click handler", e)
                     // 防止闪退，记录错误但不中断用户体验
                 }
             }

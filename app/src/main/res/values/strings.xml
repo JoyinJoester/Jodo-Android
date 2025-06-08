@@ -92,4 +92,19 @@
     
     <!-- 分类相关字符串 -->
     <string name="nav_categories">nav_categories</string>
+    
+    <!-- 小组件相关 -->
+    <string name="widget_title">我的任务</string>
+    <string name="widget_loading">加载中...</string>
+    <string name="widget_empty">没有任务</string>
+    <string name="widget_empty_subtitle">点击添加新任务</string>
+    <string name="widget_add_task">添加任务</string>
+    <string name="widget_refresh">刷新</string>
+    <string name="widget_view_all">查看全部</string>
+    <string name="widget_open_app">打开应用</string>
+    <string name="widget_task_completed">任务已完成</string>
+    <string name="widget_task_mark_complete">标记完成</string>
+    <string name="widget_configure">配置小组件</string>
+    <string name="widget_description">在桌面显示任务列表，快速管理你的待办事项</string>
+    <string name="high_priority">高优先级</string>
 </resources>

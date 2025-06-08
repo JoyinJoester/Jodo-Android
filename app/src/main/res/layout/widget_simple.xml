@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/widget_background"
+    android:padding="8dp">
+
+    <!-- 顶栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <!-- 分类选择按钮 -->
+        <TextView
+            android:id="@+id/widget_category_button"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:text="全部任务"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="8dp"
+            android:background="@drawable/widget_button_background"
+            android:drawableEnd="@drawable/ic_arrow_drop_down"
+            android:drawablePadding="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:singleLine="true"
+            android:ellipsize="end" />        <!-- 添加任务按钮 -->
+        <ImageButton
+            android:id="@+id/widget_add_task_button"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_add"
+            android:background="@drawable/widget_add_button_simple"
+            android:contentDescription="添加任务"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:tint="@android:color/white"
+            android:scaleType="center" />
+
+    </LinearLayout>    <!-- 任务列表容器 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- 任务列表 -->
+        <ListView
+            android:id="@+id/widget_task_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:scrollbars="none"
+            android:paddingTop="4dp" />
+
+        <!-- 空状态视图 -->
+        <TextView
+            android:id="@+id/widget_empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="暂无任务"
+            android:textColor="#CCFFFFFF"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</LinearLayout>

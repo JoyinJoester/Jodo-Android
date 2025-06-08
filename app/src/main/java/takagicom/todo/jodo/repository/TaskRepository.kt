@@ -15,6 +15,8 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.withContext
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 import takagicom.todo.jodo.model.Task
 import takagicom.todo.jodo.model.RepeatInterval
 import takagicom.todo.jodo.model.RepeatSettings
@@ -30,18 +32,24 @@ class TaskRepository(private val context: Context) {
     private val _tasks = MutableStateFlow<List<Task>>(emptyList())
     val tasks: StateFlow<List<Task>> = _tasks.asStateFlow()
     
-    private val idCounter = AtomicLong(0)
+    private val idCounter = AtomicLong(1) // 从1开始，避免0作为ID
     private val filename = "tasks.json"
+    @Volatile private var isInitialized = false
     
     init {
-        loadTasks()
-        
-        tasks.value.maxByOrNull { it.id }?.let {
-            idCounter.set(it.id + 1)
+        // 在后台线程加载任务，不阻塞主线程
+        CoroutineScope(Dispatchers.IO).launch {
+            loadTasks()
+            
+            // 在后台线程中更新ID计数器
+            val maxId = tasks.value.maxByOrNull { it.id }?.id ?: 0
+            idCounter.set(maxId + 1)
+            isInitialized = true
         }
     }
     
     fun getNextId(): Long {
+        // 确保有一个可用的ID，即使数据还没完全加载
         return idCounter.getAndIncrement()
     }
     
@@ -105,8 +113,7 @@ class TaskRepository(private val context: Context) {
             }
         }
     }
-      
-    private fun loadTasks() {
+        private suspend fun loadTasks() = withContext(Dispatchers.IO) {
         try {
             val file = File(context.filesDir, filename)
             if (file.exists()) {

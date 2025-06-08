@@ -35,12 +35,53 @@
                 android:name="androidx.work.WorkManagerInitializer"
                 android:value="androidx.startup"
                 tools:node="remove" />
-        </provider>
-
-        <!-- 添加通知接收器 -->
+        </provider>        <!-- 添加通知接收器 -->
         <receiver 
             android:name=".notification.TaskReminderReceiver"
-            android:exported="false" />
+            android:exported="false" />        <!-- 简单小组件Provider -->
+        <receiver 
+            android:name=".widget.SimpleTaskWidgetProvider"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="takagicom.todo.jodo.widget.CATEGORY_CLICK" />
+                <action android:name="takagicom.todo.jodo.widget.ADD_TASK_CLICK" />
+                <action android:name="takagicom.todo.jodo.widget.TASK_COMPLETE" />
+                <action android:name="takagicom.todo.jodo.widget.TASK_FAVORITE" />
+                <action android:name="TASK_DATA_CHANGED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/simple_widget_info" />
+        </receiver>
+          <!-- 简单小组件RemoteViewsService -->
+        <service
+            android:name=".widget.SimpleWidgetRemoteViewsService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"
+            android:exported="false" />        <!-- 分类选择Activity -->
+        <activity
+            android:name=".widget.CategorySelectorActivity"
+            android:theme="@style/BottomSheetTheme"
+            android:exported="false"
+            android:taskAffinity=""
+            android:excludeFromRecents="true" />        <!-- 快速添加任务透明Activity -->
+        <activity
+            android:name=".widget.QuickAddTaskActivity"
+            android:theme="@style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:exported="false"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop" />
+            
+        <!-- 简洁快速添加任务Activity -->
+        <activity
+            android:name=".widget.QuickAddTaskMinimalActivity"
+            android:theme="@style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:exported="false"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize|stateVisible" />
     </application>
 
 </manifest>

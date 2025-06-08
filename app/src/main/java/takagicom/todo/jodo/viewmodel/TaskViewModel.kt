@@ -16,15 +16,12 @@ import takagicom.todo.jodo.model.Task
 import takagicom.todo.jodo.model.TaskFilter
 import takagicom.todo.jodo.repository.TaskRepository
 import java.time.LocalDateTime
-import java.util.concurrent.atomic.AtomicBoolean
 
 class TaskViewModel(
     application: Application, 
     private val savedStateHandle: SavedStateHandle
 ) : AndroidViewModel(application) {
-    
-    private val repository = TaskRepository(application)
-    private val isProcessing = AtomicBoolean(false)
+      private val repository = TaskRepository(application)
     
     // 直接监听repository的数据变化
     val tasks = repository.tasks
@@ -34,8 +31,7 @@ class TaskViewModel(
     
     private val _currentFilter = MutableStateFlow(TaskFilter.ALL)
     val currentFilter: StateFlow<TaskFilter> = _currentFilter.asStateFlow()
-    
-    private val _currentCategoryId = MutableStateFlow<Long?>(null)
+      private val _currentCategoryId = MutableStateFlow<Long?>(null)
     val currentCategoryId: StateFlow<Long?> = _currentCategoryId.asStateFlow()
     
     init {
@@ -88,66 +84,62 @@ class TaskViewModel(
             )
             repository.addTask(task)
         }
-    }
-    
-    fun toggleTaskCompleted(taskId: Long) {
-        if (isProcessing.getAndSet(true)) return
-          viewModelScope.launch {
-            try {
-                val currentTasks = repository.tasks.value
-                val task = currentTasks.find { it.id == taskId }
-                if (task != null) {
-                    val updatedTask = task.copy(completed = !task.completed)
-                    repository.updateTask(updatedTask)
-                }
-            } catch (e: Exception) {
-                // 记录错误但不中断
-            } finally {
-                isProcessing.set(false)
-            }
-        }
-    }
-      fun toggleTaskStarred(taskId: Long) {
-        if (isProcessing.getAndSet(true)) {
-            return
-        }
+    }    fun toggleTaskCompleted(taskId: Long) {
+        android.util.Log.d("TaskViewModel", "toggleTaskCompleted called for taskId: $taskId")
         
         viewModelScope.launch {
             try {
+                android.util.Log.d("TaskViewModel", "Starting toggleTaskCompleted operation")
                 val currentTasks = repository.tasks.value
                 val task = currentTasks.find { it.id == taskId }
                 if (task != null) {
-                    val updatedTask = task.copy(starred = !task.starred)
+                    android.util.Log.d("TaskViewModel", "Found task: ${task.description}, current completed: ${task.completed}")
+                    val updatedTask = task.copy(completed = !task.completed)
                     repository.updateTask(updatedTask)
+                    android.util.Log.d("TaskViewModel", "Task updated successfully, new completed: ${updatedTask.completed}")
+                } else {
+                    android.util.Log.w("TaskViewModel", "Task not found with id: $taskId")
                 }
             } catch (e: Exception) {
-                // 记录错误但不中断
-            } finally {
-                isProcessing.set(false)
+                android.util.Log.e("TaskViewModel", "Error in toggleTaskCompleted", e)
+            }
+        }
+    }    fun toggleTaskStarred(taskId: Long) {
+        android.util.Log.d("TaskViewModel", "toggleTaskStarred called for taskId: $taskId")
+        
+        viewModelScope.launch {
+            try {
+                android.util.Log.d("TaskViewModel", "Starting toggleTaskStarred operation")
+                val currentTasks = repository.tasks.value
+                val task = currentTasks.find { it.id == taskId }
+                if (task != null) {
+                    android.util.Log.d("TaskViewModel", "Found task: ${task.description}, current starred: ${task.starred}")
+                    val updatedTask = task.copy(starred = !task.starred)
+                    repository.updateTask(updatedTask)
+                    android.util.Log.d("TaskViewModel", "Task updated successfully, new starred: ${updatedTask.starred}")
+                } else {
+                    android.util.Log.w("TaskViewModel", "Task not found with id: $taskId")
+                }
+            } catch (e: Exception) {
+                android.util.Log.e("TaskViewModel", "Error in toggleTaskStarred", e)
             }
         }
     }
-    
-    fun deleteTask(taskId: Long) {
-        if (isProcessing.getAndSet(true)) return
-        
+      fun deleteTask(taskId: Long) {
         viewModelScope.launch {            try {
                 repository.deleteTask(taskId)
             } catch (e: Exception) {
                 // 记录错误但不中断
-            } finally {
-                isProcessing.set(false)
             }
         }
     }
     
     fun updateTask(task: Task) {
-        if (isProcessing.getAndSet(true)) return
         viewModelScope.launch {
             try {
                 repository.updateTask(task)
-            } finally {
-                isProcessing.set(false)
+            } catch (e: Exception) {
+                // 记录错误但不中断
             }
         }
     }

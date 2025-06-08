@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:minHeight="56dp">
+
+    <!-- 左侧图标 -->
+    <ImageView
+        android:id="@+id/filter_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_folder"
+        android:tint="#FFFFFF" />
+
+    <!-- 主要内容区域 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <!-- 筛选名称 -->
+        <TextView
+            android:id="@+id/filter_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="筛选名称"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:ellipsize="end" />
+
+        <!-- 任务数量说明 -->
+        <TextView
+            android:id="@+id/filter_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="任务数量"
+            android:textSize="14sp"
+            android:textColor="#CCCCCC"
+            android:layout_marginTop="2dp"
+            android:singleLine="true"
+            android:ellipsize="end" />
+
+    </LinearLayout>
+
+    <!-- 右侧任务数量标签 -->
+    <TextView
+        android:id="@+id/task_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="0"
+        android:textSize="14sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/count_badge_background"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:minWidth="24dp"
+        android:gravity="center" />
+
+</LinearLayout>

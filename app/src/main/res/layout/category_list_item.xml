@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:minHeight="48dp">
+
+    <!-- 分类颜色指示器 -->
+    <View
+        android:id="@+id/category_color"
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="12dp"
+        android:background="#2196F3" />
+
+    <!-- 分类名称 -->
+    <TextView
+        android:id="@+id/category_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:text="分类名称"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:singleLine="true"
+        android:ellipsize="end" />
+
+    <!-- 任务数量 -->
+    <TextView
+        android:id="@+id/task_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="0"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:background="#f0f0f0"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:minWidth="24dp"
+        android:gravity="center" />
+
+</LinearLayout>

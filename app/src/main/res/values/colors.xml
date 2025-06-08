@@ -103,4 +103,14 @@
     <!-- 分割线颜色 -->
     <color name="divider">#374151</color>           <!-- 分割线 -->
     <color name="divider_light">#4b5563</color>     <!-- 浅分割线 -->
+    
+    <!-- 小组件专用颜色 -->
+    <color name="widget_background">#1f2937</color>      <!-- 小组件背景 -->
+    <color name="widget_border">#374151</color>          <!-- 小组件边框 -->
+    <color name="widget_item_background">#111827</color>  <!-- 小组件项目背景 -->
+    <color name="widget_button_normal">#4338ca</color>    <!-- 小组件按钮正常状态 -->
+    <color name="widget_button_pressed">#3730a3</color>   <!-- 小组件按钮按下状态 -->
+    <color name="widget_text_primary">#f8fafc</color>     <!-- 小组件主要文本 -->
+    <color name="widget_text_secondary">#cbd5e1</color>   <!-- 小组件次要文本 -->
+    <color name="widget_header_background">#374151</color> <!-- 小组件头部背景 -->
 </resources>

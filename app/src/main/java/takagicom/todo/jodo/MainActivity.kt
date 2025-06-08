@@ -1,5 +1,6 @@
 package takagicom.todo.jodo
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.SubMenu
@@ -90,9 +91,11 @@ class MainActivity : AppCompatActivity() {
         
         // 观察任务过滤器状态变化并更新侧边栏选中状态
         observeTaskFilterAndUpdateSidebar()
-        
-        // 检查并请求通知权限
+          // 检查并请求通知权限
         checkNotificationPermission()
+        
+        // 处理从小组件传递的Intent
+        handleWidgetIntent()
     }
     
     /**
@@ -458,11 +461,41 @@ class MainActivity : AppCompatActivity() {
 
             override fun onDrawerClosed(drawerView: android.view.View) {
                 // 不需要处理
-            }
-
-            override fun onDrawerStateChanged(newState: Int) {
+            }            override fun onDrawerStateChanged(newState: Int) {
                 // 不需要处理
             }        })
+    }
+    
+    /**
+     * 处理从小组件传递的Intent
+     */
+    private fun handleWidgetIntent() {
+        intent?.let { intent ->
+            val action = intent.getStringExtra("action")
+            when (action) {
+                "add_task" -> {
+                    // 导航到添加任务页面
+                    navController.navigate(R.id.nav_all_tasks)
+                    // 这里可以触发添加任务的对话框或页面
+                    // 由于没有看到具体的添加任务实现，这里只是示例
+                }
+                "edit_task" -> {
+                    // 处理编辑任务
+                    val taskId = intent.getLongExtra("task_id", -1)
+                    if (taskId != -1L) {
+                        // 导航到对应的任务编辑页面
+                        navController.navigate(R.id.nav_all_tasks)
+                        // 这里可以打开编辑任务的对话框
+                    }
+                }
+            }
+        }
+    }
+    
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        handleWidgetIntent()
     }
   
 }
